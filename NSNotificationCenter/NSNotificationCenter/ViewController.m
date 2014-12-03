@@ -26,15 +26,14 @@
 
 -(void)receiveNotification:(NSNotification*)notification{
     
-    NSDictionary *extraInfo = [notification userInfo];
     
     if([[notification name]isEqualToString:@"test1"]){
         self.counter1++;
-        self.textField1.text = [NSString stringWithFormat:@"%@: %d", [extraInfo objectForKey:@"button_name"], self.counter1];
+        self.textField1.text = [NSString stringWithFormat:@"%d", self.counter1];
     }
     else{
         self.counter2++;
-        self.textField2.text = [NSString stringWithFormat:@"%@: %d", [extraInfo objectForKey:@"button_name"],self.counter2];
+        self.textField2.text = [NSString stringWithFormat:@"%d",self.counter2];
     }
 }
 

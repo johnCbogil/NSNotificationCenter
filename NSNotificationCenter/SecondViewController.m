@@ -36,14 +36,12 @@
 
 - (IBAction)onePressed:(id)sender {
     
-    NSDictionary *extraInfo = [NSDictionary dictionaryWithObject:@"One" forKey:@"button_name"];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"test1" object:self userInfo:extraInfo];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"test1" object:self];
 }
 
 - (IBAction)twoPressed:(id)sender {
     
-    NSDictionary *extraInfo = [NSDictionary dictionaryWithObject:@"Two" forKey:@"button_name"];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"test2" object:self userInfo:extraInfo];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"test2" object:self];
 }
 
 -(void)dealloc{
